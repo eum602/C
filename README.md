@@ -1,19 +1,22 @@
 ## C
 
-###Editor
+### Editor
 Preferred editor: vscode
 
-###Configuring the envrionment:
+### Configuring the envrionment:
+In order to configure the editor you can do the following:
+### c_cpp_properties.json file:
+* Configuring the compiler:
+	* ctrl -shift + p => shows the palette.
+	* C/C++ Edit configurations UI =>
+	* Set correctly the compiler path: in linux: /usr/bin/gcc
+	* Set the intellisense mode: gcc-x64 
+	It will have created a .code folder with **c_cpp_properties.json** configuration file.
 
-ctrl -shift + p => shows the palette.
-C/C++ Edit configurations UI => 
-	Set correctly the compiler path: in linux: /usr/bin/gcc
-	Set the intellisense mode: gcc-x64
-It will have created a .code folder with c_cpp_properties.json configuration.
-
-
-Tasks:configure tasks ==> Create tasks file from template => others => 
-Creates a tasks file: Modify the content to be something like this:
+### tasks.json file:
+* ctrl -shift + p => shows the palette.
+* Tasks:configure tasks ==> Create tasks file from template => others => 
+* Modify the content of the new **tasks** to be something like this:
 ```shell
 
 {
@@ -43,8 +46,9 @@ instead of hello world add the file name to compile from.
 ```
 
 
-Debug ==> open launch json ==> c++(GDB/LLDB)
-Creates a launch.json file: Modify the content to be something like this:
+### launch.json file 
+* ctrl -shift + p => shows the palette. ==> open launch json ==> c++(GDB/LLDB)
+* Modify the content of launch.json file to be something like this:
 ```shell
 {
     // Use IntelliSense to learn about possible attributes.
@@ -75,7 +79,7 @@ Creates a launch.json file: Modify the content to be something like this:
 }
 ```
 
-###Creating your executable file
+### Creating your executable file
 
 ```shell
 $ touch helloworld.c
@@ -90,8 +94,8 @@ int main(){
 
 ```
 
-###Executing the task:
-press: CTRL + SHIFT + B => will compile according to tasks.json file generating the executable helloworld.
+### Executing the task:
+* press: CTRL + SHIFT + B => will compile according to tasks.json file generating the executable helloworld.
 
-###Debugging:
-To debug press F5 key. Note that you can previously add a debugging point in your code.
+### Debugging:
+* To debug press F5 key. Note that you can previously add a debugging point in your code.
